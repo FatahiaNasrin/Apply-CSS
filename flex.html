@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .wrapper>*{
+        padding: 10px;
+        margin: 10px;
+        flex: 1 100%;
+        border-radius: 10px;
+        }
+        .header{
+            background-color: tomato;
+            height: 120px;
+        }
+        .footer{
+            background-color: lightgreen;
+            height: 80px;
+        }
+        .main{
+            text-align: left;
+            background-color: lightskyblue;
+            height: 300px;
+            font-size: 24px;
+        }
+        .aside1{
+            background-color: gold;
+        }
+        .aside2{
+            background-color: hotpink;
+        }
+        @media all and (min-width: 800px){
+        .main{
+            flex: 3;
+        }
+        .aside1{
+            order: 1;
+        }
+        .aside2{
+            order: 2;
+        }
+        .main{
+            order: 2;
+        }
+        .footer{
+            order: 4;
+        }
+        } 
+        @media all and (min-width: 600px){
+            .aside{
+                flex:1;
+            }
+        }
+        .background{
+            background-color: slategray;
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+        }
+        h2{
+            font-size: 30px;
+            margin: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            font-size: 40px;
+            border:3px solid salmon;
+            border-radius: 10%;
+            text-align:center ;
+           margin-top: 10px;
+           color: cornsilk;
+        }
+        .flex-start{
+        display: flex;
+        }
+        .flex-end{
+            display: flex;
+        justify-content: flex-end;
+        }
+        .flex-center{
+            display: flex;
+        justify-content: center;
+        }
+        .flex-column{
+            display: flex;
+         flex-direction: column;
+        }
+        .flex-row{
+            display: flex;
+         flex-direction: row;
+        }
+        .flex-wrap{
+            display: flex;
+  flex-wrap: wrap;
+        }
+        .flex-justify{
+            display: flex;
+  justify-content: center;
+        }
+        .flex-around{
+            display: flex;
+  justify-content: space-around;
+        }
+        .align-items{
+            display: flex;
+  height: 200px;
+  align-items: flex-start;
+  background-color: skyblue;
+        }
+        .flex-stretch{
+            display: flex;
+  align-items: stretch;
+  background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+<header class="header">
+    <h1>Header</h1>
+</header>
+<article class="main">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum possimus aut, quod sapiente ab pariatur voluptas vero doloremque, quam recusandae harum voluptatum aspernatur molestiae numquam facere iure corrupti animi nam.</p>
+</article>
+<aside class="aside aside1">
+    <h1>Aside1</h1>
+</aside>
+<aside class="aside aside2">
+    <h1>Aside2</h1>
+</aside>
+<footer class="footer">
+    <h1>Footer</h1>
+</footer>
+    </div>
+
+    <section class="background">
+    <div class="flexbox">
+    <h1>Flexbox</h1>
+    <div class="flex-start">
+        <h2>flex-start</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-end">
+        <h2>flex-end</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-center">
+        <h2>flex-center</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-column">
+        <h2>flex-column</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-row">
+        <h2>flex-row</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-wrap">
+        <h2>flex-wrap</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+        <div class="box">Box-5</div>
+        <div class="box">Box-6</div>
+    </div>
+
+    <div class="flex-justify">
+        <h2>flex-justify</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-around">
+        <h2>flex-around</h2>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="align-items">
+        <!-- <h2>align-items</h2> -->
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+
+    <div class="flex-stretch">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+</div>
+</section>
+</body>
+</html>
