@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-query Document</title>
+    <style>
+        .menu{
+            background-color: royalblue;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .menu a{
+            text-decoration: none;
+            padding: 20px;
+            color: white;
+        }
+        .menu a:hover{
+            background-color: gray;
+        }
+        @media screen and (max-width:600px) {
+            .menu{
+                flex-direction: column;
+                padding: 10px;
+            }
+            .menu a {
+                background-color: indianred;
+                margin: 10px 0px;
+                text-align: center;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="">Home</a>
+        <a href="">Service</a>
+        <a href="">About </a>
+        <a href="">Contact</a>
+    </div>
+</body>
+</html>
