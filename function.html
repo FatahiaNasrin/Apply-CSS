@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Document</title>
+</head>
+<style>
+    
+ body{
+     font-family: sans-serif;
+ }
+.container{
+    border: 1px solid navy;
+    background-color: palegoldenrod;
+    width: (100% - 2opx -20px- 1px 1px);
+    height: 300px;
+    padding: 20px;
+}
+#my-div{
+    width: 350px;
+    height: 100px;
+    background-color: powderblue;
+    position: relative;
+}
+#my-div::after{
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    background: gray;
+    color: honeydew;
+    padding: 5px 15px;
+    border-radius: 20px;
+    content: attr(data-toolbar);
+
+}
+.cubic{
+    width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.cubic:hover{
+    background-color: hotpink;
+    width: 300px;
+}
+</style>
+<body>
+    <h1>CSS Functions</h1>
+    <div class="container">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolore eius fuga nihil recusandae exercitationem consequuntur explicabo fugiat eveniet! Voluptate deleniti voluptates maiores optio adipisci architecto libero incidunt pariatur veniam, voluptatem similique ipsum asperiores reiciendis placeat recusandae aut, minima totam sint aliquam aperiam! Fuga, illo. Vero repudiandae nam facere quam, numquam blanditiis adipisci mollitia voluptas natus soluta reprehenderit eos laborum aut perspiciatis sed aliquid, id, animi quibusdam delectus quod tempore. Tenetur similique iusto est consectetur praesentium quidem deleniti excepturi beatae ea? Amet, totam deleniti. Odit, aliquam. Doloremque ipsam similique blanditiis officia quam. Adipisci, non asperiores assumenda esse dolores odit incidunt?
+    </div>
+    <h2>CSS attr()</h2>
+    <ul class="tsummary">
+<li>Lets you insert a CSS value from an HTML attribute</li>
+<li>Useful to avoid duplicating code or HTML output</li>
+    </ul>
+    <hr class="hr">
+    <div id="my-div" data-toolbar="This ia my toolbar">This is a div
+    </div>
+    <h1>The cubic-bezier() Function</h1>
+
+<p>Vero repudiandae nam facere quam, numquam blanditiis adipisci mollitia voluptas natus soluta reprehenderit</p>
+
+<div class="cubic"></div>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+</body>
+</html>
