@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backdrop Filter Document</title>
+    <style>
+     
+        .form-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(images/pic-4.jpg);
+            background-size: cover;
+        }
+        .form{
+            width: 25%;
+            padding: 15px 0;
+            border-radius: 10px;
+            background-color:rgba(255,255,255,0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 20px 2px rgba(0,0,0, 0.5);
+        }
+        form{
+            padding: 15px 30px;
+        }
+        form input{
+            width: 100%;
+            padding: 15px 0px 10px 0px;
+            margin: 10px 0;
+            border-radius: 3px;
+            border: none;
+            text-align:center;
+        }
+        .button{
+        background-color:goldenrod;
+        padding:9px 25px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+}
+        .box{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 150px;
+        }
+        img{
+            width: 100%;
+        }
+       .box p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: auto;
+            margin: 25px;
+            background-color: rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form">
+            <form>
+                <input type="text" placeholder="Enter Your Full Name">
+                <input type="text" placeholder="Enter Your E-mail Address">
+                <input type="text" placeholder="Enter Your Password">
+                <input type="text" placeholder="Re-Enter Your Password">
+                <button  class="button" type="submit">Create New Account</button>
+            </form>
+        </div>
+    </div>
+    <div class="box">
+        <img src="images/mountains-5536397_640.jpg" alt="">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis facilis, qui a animi aut sunt excepturi. In, totam. Cum voluptate tempora vitae! Iste, corporis quibusdam. Excepturi fuga, odio esse minima accusantium sed ad et labore laborum architecto soluta dignissimos tempora neque velit quod commodi doloribus maxime eum rem.</p>
+    </div>
+</body>
+</html>
